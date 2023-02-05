@@ -2,11 +2,13 @@
 const app = Vue.createApp({
     data() {
         return {
-            firstName: 'Shane',
-            lastName: 'Dorsey',
-            email: 'scdorsey22@gmail.com',
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'john@gmail.com',
             gender: 'male',
             picture: "https://randomuser.me/api/portraits/men/10.jpg",
+            username: 'john11',
+            password: 'password'
         }
     },
     methods: {
@@ -21,6 +23,8 @@ const app = Vue.createApp({
             this.email = results[0].email
             this.gender = results[0].gender
             this.picture = results[0].picture.large
+            this.username = results[0].login.username
+            this.password = results[0].login.password
         }
     },
 })
